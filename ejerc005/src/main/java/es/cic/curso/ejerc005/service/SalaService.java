@@ -26,4 +26,16 @@ public class SalaService {
         return salaRepository.findById(id).orElse(null);
     }
     
+    public Sala actualizarSala(Sala sala) {
+        return salaRepository.save(sala);
+    }
+    
+    public Sala crearSala(Sala sala) {
+        return salaRepository.save(sala);
+    }
+
+    public void eliminarSala(long id) {
+        salaRepository.deleteById(id);
+    }
+
 }

@@ -23,8 +23,8 @@ public class Director {
     private String nombre;
     
     private Date fechaNacimiento;
-    
-    @OneToMany(mappedBy = "director", cascade = { CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE }, orphanRemoval = true)
+
+    @OneToMany(mappedBy = "director", cascade = { CascadeType.PERSIST, CascadeType.MERGE }, orphanRemoval = true)
     private List<Pelicula> peliculas = new ArrayList<>();
 
     public Director() {

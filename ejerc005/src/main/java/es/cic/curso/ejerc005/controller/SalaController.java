@@ -26,6 +26,6 @@ public class SalaController {
     @GetMapping("/{id}")
     public Sala findSalaById(@PathVariable("id") long id) {
         return salaService.findSalaById(id);
-    }
+    }    
 
 }
