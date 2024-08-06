@@ -1,4 +1,4 @@
-package es.cic.curso.ejerc004;
+package es.cic.curso.ejerc004.pelicula;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -70,7 +70,7 @@ public class PeliculaControllerIT {
     }
 
     @Test
-    void testCrearUsuario() throws Exception {
+    void testCrearPelicula() throws Exception {
         Pelicula peliculaNuevo = new Pelicula();
         peliculaNuevo.setId(12L);
         peliculaNuevo.setTitulo("test");
@@ -84,7 +84,7 @@ public class PeliculaControllerIT {
     }
 
     @Test
-    void testActualizarUsuario() throws Exception {
+    void testActualizarPelicula() throws Exception {
         pelicula.setTitulo("title");
 
         mockMvc.perform(put("/api/peliculas")
@@ -96,7 +96,7 @@ public class PeliculaControllerIT {
     }
 
     @Test
-    void testEliminarUsuario() throws Exception {
+    void testEliminarPelicula() throws Exception {
         mockMvc.perform(delete("/api/peliculas/{id}", pelicula.getId()))
                 .andExpect(status().isOk());
     }
